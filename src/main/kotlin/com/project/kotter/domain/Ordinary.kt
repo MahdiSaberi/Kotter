@@ -9,7 +9,7 @@ import javax.persistence.Enumerated
 import javax.persistence.Table
 
 @Entity
-@Table(name="user_table")
+@Table(name="ordinary")
 class Ordinary(
     firstName: String,
     lastName: String,
