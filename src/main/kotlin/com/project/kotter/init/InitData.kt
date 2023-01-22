@@ -2,10 +2,8 @@ package com.project.kotter.init
 
 import com.github.javafaker.Faker
 import com.project.kotter.domain.Admin
-<<<<<<< HEAD
-=======
+
 import com.project.kotter.domain.Ordinary
->>>>>>> 1954c45aed7908b18bcfb359b2edbdca3bf8c395
 import com.project.kotter.enumeration.GenderType
 import com.project.kotter.repository.UserEntityRepository
 import org.springframework.beans.factory.annotation.Autowired
@@ -34,11 +32,7 @@ class InitData {
             val lastName: String = faker.name().lastName()
 
             userRepository.save(
-<<<<<<< HEAD
                 Ordinary(
-=======
-                Ordinary(
->>>>>>> 1954c45aed7908b18bcfb359b2edbdca3bf8c395
                     firstName,
                     lastName,
                     "$firstName$lastName".lowercase(Locale.getDefault()),
