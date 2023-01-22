@@ -1,6 +1,6 @@
 package com.project.kotter.domain
 
-import com.project.kotter.base.domain.BaseUserEntity
+import com.project.kotter.base.domain.UserEntity
 import com.project.kotter.enumeration.GenderType
 import com.project.kotter.enumeration.UserType
 import javax.persistence.Entity
@@ -16,7 +16,7 @@ class Ordinary(
     username: String,
     password: String,
     gender: GenderType?
-) : BaseUserEntity(
+) : UserEntity(
     firstName,
     lastName,
     username,
