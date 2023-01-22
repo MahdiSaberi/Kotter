@@ -20,4 +20,6 @@ open abstract class UserEntity(
      @OneToMany(mappedBy = "creator")
      private lateinit var posts: List<Post>
      open lateinit var type: UserType
+//     @ManyToMany
+//     private lateinit var liked: List<Post>
 }

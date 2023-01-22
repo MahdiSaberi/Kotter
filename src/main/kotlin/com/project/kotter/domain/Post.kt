@@ -2,11 +2,10 @@ package com.project.kotter.domain
 
 import com.project.kotter.base.domain.UserEntity
 import com.project.kotter.base.entity.BaseEntity
-import org.apache.catalina.User
-import java.util.Date
-import java.util.UUID
-import javax.persistence.*
-import kotlin.properties.Delegates
+import java.util.*
+import javax.persistence.Entity
+import javax.persistence.ManyToMany
+import javax.persistence.ManyToOne
 
 @Entity
 class Post: BaseEntity<Int>() {
@@ -16,6 +15,6 @@ class Post: BaseEntity<Int>() {
     @ManyToOne
     private lateinit var creator: UserEntity
     private var dateOfCreation: Date = Date()
-    @ElementCollection(fetch = FetchType.LAZY)
-    private lateinit var likedBy: List<Int>
+    @ManyToMany()
+    private lateinit var likedBy: MutableList<UserEntity>
 }
