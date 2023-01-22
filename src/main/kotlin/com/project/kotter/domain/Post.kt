@@ -17,5 +17,5 @@ class Post: BoxEntity() {
     @ManyToMany()
     private lateinit var likedBy: MutableList<UserEntity>
     @Enumerated(EnumType.STRING)
-    private val type: BoxType = BoxType.POST
+    override var type: BoxType = BoxType.POST
 }

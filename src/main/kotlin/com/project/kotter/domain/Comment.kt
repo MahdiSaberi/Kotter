@@ -13,6 +13,6 @@ class Comment: BoxEntity() {
     @ManyToOne
     private lateinit var post: Post
     @Enumerated(EnumType.STRING)
-    private val type: BoxType = BoxType.COMMENT
+    override var type: BoxType = BoxType.COMMENT
 
 }
