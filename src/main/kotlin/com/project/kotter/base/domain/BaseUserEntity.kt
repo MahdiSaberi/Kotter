@@ -6,6 +6,7 @@ import com.project.kotter.enumeration.UserType
 import javax.persistence.*
 
 @Entity
+@Table(name = "user_table")
 @Inheritance(strategy = InheritanceType.JOINED)
 open abstract class BaseUserEntity(
      var firstName: String,
