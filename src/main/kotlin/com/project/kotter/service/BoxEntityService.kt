@@ -1,11 +1,13 @@
 package com.project.kotter.service
 
 import com.project.kotter.base.domain.BoxEntity
+import com.project.kotter.base.entity.BaseEntity
 import com.project.kotter.base.service.BaseEntityService
 import com.project.kotter.enumeration.BoxType
+import java.io.Serializable
 
-interface BoxEntityService: BaseEntityService<BoxEntity,Int> {
-    fun findByUuid(uuid: String): BoxEntity?
-    fun findByCreator_Id(creator_id: Int): BoxEntity?
-    fun findByType(type: BoxType): BoxEntity?
+interface BoxEntityService<E: BaseEntity<ID>,ID: Serializable>: BaseEntityService<E,ID> {
+    fun findByUuid(uuid: String): E?
+    fun findByCreator_Id(creator_id: ID): E?
+    fun findByType(type: E): E?
 }
